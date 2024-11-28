@@ -11,7 +11,6 @@ try:
 except ValueError:  
     print('Vc nao digitou nada ou digitou um valor invalido!') # Msg caso tenha algum erro
 
-
 '''Melhorias sugeridas
 
 -for e range(2):
@@ -37,3 +36,44 @@ for i in range(2):  # Itera duas vezes, uma para cada número
 
 # Calculando e exibindo a soma
 print(f'A soma dos números {numeros[0]} + {numeros[1]} = {sum(numeros)}')'''
+
+#-------------------------------------------------------------------------------------------
+'''
+-Usando funcao
+
+def soma_numeros(msg):
+    while True:
+        entrada = input(msg).strip()
+        if  entrada.isdigit():
+            return int(entrada)     
+        print("Por favor, digite um número inteiro válido.")
+
+num1 = soma_numeros('Digite o primeiro numero: ')
+num2 = soma_numeros('Digite o segundo numero: ')
+print(f'A soma do número {num1} + {num2} = {num1 + num2}')
+--------------------------------------------------------------------------------------------
+-GPT
+def obter_numero(msg):
+    while True:
+        entrada = input(msg).strip()
+        
+        # Permitir números negativos verificando se são válidos
+        if entrada.lstrip('-').isdigit():
+            return int(entrada)
+        
+        # Mensagem de erro para entradas inválidas
+        print(f"Por favor, digite um número inteiro válido.\n({msg})")
+
+# Quantidade de números que o usuário deseja somar
+quantidade = obter_numero("Quantos números você quer somar? ")
+
+# Usando for para capturar os números
+numeros = []
+for i in range(quantidade):
+    numero = obter_numero(f"Digite o número {i + 1}: ")
+    numeros.append(numero)
+
+# Exibindo a soma dos números
+print(f"A soma dos números {numeros} é {sum(numeros)}.")
+
+'''
