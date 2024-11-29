@@ -32,3 +32,61 @@ except ValueError:
     print('O valor digitado é inválido!')
 
 '''
+
+'''Usando Funcoes
+
+def par_impar(num):   
+    if num % 2 == 0:
+        return 'PAR'
+    else:
+        return 'IMPAR'
+    
+while True:
+    entrada = input('Digite [S]air ou um numero inteiro: ')  
+    if entrada.upper() == 'S':
+        print('Muito obrigado por usar nosso app')
+        print('Programa finalizado com sucesso')
+        break
+    
+    if entrada.isdigit():
+        numero = int(entrada)
+        valor = par_impar(numero)
+        print(f'O valor {entrada} digitado e {valor}')
+        print()
+    else:
+        print('Erro! Por favor, digite apenas números inteiros.')
+        print()
+    
+-Sugestoes de melhorias
+
+-Aceitar números negativos:
+Atualmente, a validação isdigit() não aceita números negativos. Você pode corrigir isso com lstrip('-').isdigit().
+
+-Melhor feedback de erro:
+Quando a entrada for inválida, explique exatamente o problema ao usuário.
+
+-Simplificação do if no loop:
+Combine condições e torne o fluxo do código mais enxuto.
+
+def par_impar(num):   
+    return 'PAR' if num % 2 == 0 else 'IMPAR'
+
+while True:
+    entrada = input('Digite um número inteiro ou [S]air: ').strip()
+    
+    if entrada.upper() == 'S':
+        print('Muito obrigado por usar nosso app.')
+        print('Programa finalizado com sucesso.')
+        break
+    
+    # Validar números inteiros, incluindo negativos
+    if entrada.lstrip('-').isdigit():
+        numero = int(entrada)
+        resultado = par_impar(numero)
+        print(f'O valor {numero} digitado é {resultado}.')
+    else:
+        print('Erro! Por favor, digite um número inteiro válido.')
+    print()  # Adicionar uma linha em branco para organização
+
+
+'''
