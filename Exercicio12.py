@@ -1,4 +1,4 @@
-'''Exercício 2: Números primos
+'''Exercício 12: Números primos
 Peça ao usuário um número inteiro positivo e verifique se ele é um número primo.
 Exemplo:
 Entrada: 7

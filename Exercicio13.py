@@ -1,4 +1,4 @@
-'''Exercício 3: Palavras com mais de 5 caracteres
+'''Exercício 13: Palavras com mais de 5 caracteres
 Peça ao usuário uma frase e mostre todas as palavras da frase que possuem mais de 5 caracteres.
 Exemplo:
 Entrada: "A programação é maravilhosa e desafiadora"

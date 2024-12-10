@@ -1,4 +1,4 @@
-'''Exercício 1: Soma dos dígitos
+'''Exercício 11: Soma dos dígitos
 Peça ao usuário para digitar um número inteiro positivo e calcule a soma de todos os dígitos desse número.
 Exemplo:
 Entrada: 1234
