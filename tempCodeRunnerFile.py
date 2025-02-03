@@ -1,1 +1,0 @@
-A programação é incrível!
